@@ -11,7 +11,11 @@ A complexidade é um grande problema para o desenvolvimento, a cada etapa o sist
 
 - Orientação a objetos
 
-É um conjunto de boas práticas para desenvolver de forma correta, organizada e limpa. Assim torna o código reutilizavel e mais eficiente
+É um conjunto de boas práticas para desenvolver de forma correta, organizada e limpa. 
+As vantagens de desenvolver dessa são: 
+- Desenvolvimento em paralelo
+- Flexibilidade a mudanças
+- Facilidade no entendimento
 
 - Padrão de código
 
