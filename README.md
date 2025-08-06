@@ -11,11 +11,7 @@ A complexidade é um grande problema para o desenvolvimento, a cada etapa o sist
 
 - Orientação a objetos
 
-É um conjunto de boas práticas para desenvolver de forma correta, organizada e limpa. 
-As vantagens de desenvolver dessa são: 
-- Desenvolvimento em paralelo
-- Flexibilidade a mudanças
-- Facilidade no entendimento
+É um conjunto de boas práticas para desenvolver de forma correta, organizada e limpa.
 
 - Padrão de código
 
@@ -27,7 +23,10 @@ Aprender um Framework se faz muito importante, uma vez que aprendeu a lógica de
 
 - Ocultação de informação
 
-Se trata de um ocultamento de complexidade. Para isso ser possível utilizamos as classes, para ocultar as regras de negócio e lógicas, criando uma interface de fácil interação com o ser humano 
+Se trata de um ocultamento de complexidade. Para isso ser possível utilizamos as classes, para ocultar as regras de negócio e lógicas, criando uma interface de fácil interação com o ser humano. Desenvolver utilizando essa ocutação de forma correta traz vantagens como por exemplo:
+- Desenvolvimento em paralelo
+- Flexibilidade a mudanças
+- Facilidade no entendimento
 
 // Aula 04/08/2025
 
