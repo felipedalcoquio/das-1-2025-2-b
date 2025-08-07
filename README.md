@@ -1,5 +1,5 @@
 // Livro Engenharia de Software Moderna
-// Aula 31/07
+// Aula 31/07/2025
 
 - Abstração
 
@@ -39,6 +39,16 @@ Coesão é quando um código faz apenas uma coisa bem feita e isso o torna efici
 A ideia principal do acoplamento é fazer com que as classes não conversem diretamente para que a aplicação continue rodando sem haver problemas
 Sempre que houver uma associação entre classes terá uma variável
 
-- Princípio da responsabilidade única
+// Aula 07/08/2025
 
-Esse princípio é uma boa prática de desenvolvimento que, visa manter cada treço de código com apenas uma responsabilidade como diz o próprio nome do tópico. Isso ajuda a identificar o que cada parte está fazendo com mais facilidade 
+- Princípio da Responsabilidade única
+
+Esse princípio visa manter cada classe tem apenas uma responsabilidade como diz o próprio nome do tópico. Isso ajuda a identificar o que cada classe está fazendo com mais facilidade, sem misturar responsabilidade, por exemplo classes de entidades tem apenas entidades e assim por diante. 
+
+Seta Herança: Linha cheia com a seta vazada
+Seta Implementação (Interface): Linha tracejada com a seta vazada
+Seta Associação: Linha cheia com a seta cheia
+
+- Princípio da Segregação de Interfaces
+
+O princío tem como ideia principal separar as interfaces de forma que cada uma tenha apenas uma responsabilidade trazendo coesão para o código.
