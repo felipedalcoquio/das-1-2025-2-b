@@ -52,3 +52,26 @@ Seta Associação: Linha cheia com a seta cheia
 - Princípio da Segregação de Interfaces
 
 O princío tem como ideia principal separar as interfaces de forma que cada uma tenha apenas uma responsabilidade trazendo coesão para o código.
+
+
+// Aula dia 12/08/2025
+
+- Princípio de Inversão de Dependências
+
+A lógica por trás desse princípio é tornar possível o fácil desacoplamento do código, tendo como base a ideia de que as classes não dependem umas das outras diretamente mas sim de uma interface.
+
+- Preferir Associação à Herança
+
+Significa dizer que na maioria dos casos vamos usar a associação no lugar da herança, pois a associação constroi o encapsulamento de classes e também é mais abrangente um exemplo disso: um funcionário se torna cliente e vice versa. Enquanto isso a herança viola o encapsulamento da classe pai e é excludente gerando problemas. A grande maioria dos casos vamos usar associação ao invés de herança, existem raros casos que ela realmente se faz útil
+
+- Princípio de Demeter
+
+Também conhecido como princípio do menor conhecimento tem como ideia central que a implementação dentro de um método pode invocar
+- apenas métodos da própria classe
+- objetos passados por parâmetros do método
+- objetos criados pelo próprio método
+- atributo da classe do método
+
+- Princípio Aberto/Fechado
+
+Significa dizer que nosso código precisa ficar protegido e fechado para modificações, porém aberto para extenções possibilitando criações utilizando o código que fizemos como base.
