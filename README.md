@@ -75,3 +75,5 @@ Também conhecido como princípio do menor conhecimento tem como ideia central q
 - Princípio Aberto/Fechado
 
 Significa dizer que nosso código precisa ficar protegido e fechado para modificações, porém aberto para extenções possibilitando criações utilizando o código que fizemos como base.
+
+Tudo que é estático é carregado primeiro na memória
