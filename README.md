@@ -76,4 +76,11 @@ Também conhecido como princípio do menor conhecimento tem como ideia central q
 
 Significa dizer que nosso código precisa ficar protegido e fechado para modificações, porém aberto para extenções possibilitando criações utilizando o código que fizemos como base.
 
-Tudo que é estático é carregado primeiro na memória
+// Aula dia 14/08/2025
+
+- Princípio de Liskov 
+
+Esse princípio diz que tendo uma superclasse (classe pai) e tenho subclasses (classes filhas) que herdam desse pai, preciso que todas as classes filhas tenham os mesmos métodos para que seja possível fazer trocas entre elas sem quebrar o código.
+
+
+//Tudo que é estático é carregado primeiro na memória
