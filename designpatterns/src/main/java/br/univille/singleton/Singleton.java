@@ -12,12 +12,12 @@ public class Singleton {
         this.segredo = segredo;
     }
     private Singleton(){
-        System.out.println("Singleon: Construtor");
+        System.out.println("Singleton: Construtor");
     }
     public static Singleton getInstance(){
-        System.out.println("Singleon: getInstance");
+        System.out.println("Singleton: getInstance");
         if (instance == null){
-            System.out.println("Singleon: NEW");
+            System.out.println("Singleton: NEW");
             instance = new Singleton();
         }
         return instance;
