@@ -1,5 +1,5 @@
-// Livro Engenharia de Software Moderna
-// Aula 31/07/2025
+## Livro Engenharia de Software Moderna
+## Aula 31/07/2025
 
 - Abstração
 
@@ -28,7 +28,7 @@ Se trata de um ocultamento de complexidade. Para isso ser possível utilizamos a
 - Flexibilidade a mudanças
 - Facilidade no entendimento
 
-// Aula 04/08/2025
+## Aula 04/08/2025
 
 - Coesão
 
@@ -39,7 +39,7 @@ Coesão é quando um código faz apenas uma coisa bem feita e isso o torna efici
 A ideia principal do acoplamento é fazer com que as classes não conversem diretamente para que a aplicação continue rodando sem haver problemas
 Sempre que houver uma associação entre classes terá uma variável
 
-// Aula 07/08/2025
+## Aula 07/08/2025
 
 - Princípio da Responsabilidade única
 
@@ -54,7 +54,7 @@ Seta Associação: Linha cheia com a seta cheia
 O princío tem como ideia principal separar as interfaces de forma que cada uma tenha apenas uma responsabilidade trazendo coesão para o código.
 
 
-// Aula dia 12/08/2025
+## Aula dia 12/08/2025
 
 - Princípio de Inversão de Dependências
 
@@ -76,11 +76,33 @@ Também conhecido como princípio do menor conhecimento tem como ideia central q
 
 Significa dizer que nosso código precisa ficar protegido e fechado para modificações, porém aberto para extenções possibilitando criações utilizando o código que fizemos como base.
 
-// Aula dia 14/08/2025
+## Aula dia 14/08/2025
 
 - Princípio de Liskov 
 
 Esse princípio diz que tendo uma superclasse (classe pai) e tenho subclasses (classes filhas) que herdam desse pai, preciso que todas as classes filhas tenham os mesmos métodos para que seja possível fazer trocas entre elas sem quebrar o código.
 
 
-//Tudo que é estático é carregado primeiro na memória
+- Tudo que é estático é carregado primeiro na memória
+
+## Aula 28/08/2025
+
+Estruturas da Arquitetura
+
+- Caracteristicas da Arquitetura
+
+De maneira resumida são os requisitos não funcionais que o sistema precisa ter, se não tiver esses requisitos talvez não tenha funcionalidade real. Hoje em dia abrimos mão de algumas funcionalidades em troca de conseguir ter mais segurança, pois é humanamente impossível um sistema ter todas as caracteristicas da arquitetura.
+
+- Decisões da Arquitetura
+
+Este é o momento que tomamos a decisão de qual modelo de arquitetura e tecnologia iremos usar no projeto.
+
+- Princípios do Design
+
+Os princíios são boas práticas para que o sistema tenha as caracteristicas desejadas com pouco acoplamento e se possível não gerar esse problema.
+
+Temos duas formas de comunicação dos microserviços
+
+- Forma Sincrona: Essa forma pode ser utilizada em pequenos sistemas sem gerar grandes problemas.
+
+- Forma Assincrona: É a melhor forma dos micro serviços conversarem sem acoplamento, utilizando o design do observer para se comunicarem
