@@ -99,10 +99,50 @@ Este é o momento que tomamos a decisão de qual modelo de arquitetura e tecnolo
 
 - Princípios do Design
 
-Os princíios são boas práticas para que o sistema tenha as caracteristicas desejadas com pouco acoplamento e se possível não gerar esse problema.
+Os princíios são boas práticas para que o sistema tenha as caracteristicas desejadas e precisam ser mantidas para dar continuidade a estrutura sólida da arquitetura.
 
 Temos duas formas de comunicação dos microserviços
 
 - Forma Sincrona: Essa forma pode ser utilizada em pequenos sistemas sem gerar grandes problemas.
 
 - Forma Assincrona: É a melhor forma dos micro serviços conversarem sem acoplamento, utilizando o design do observer para se comunicarem
+
+## Aula 01/09/2025
+
+- Expectativas de um arquiteto
+
+As empresas geralmente tem certas expectativas nos arquitetos de fora ou de dentro da empresa para organizar a arquitetura e tomar boas decisões acreditando que ela não irá precisar de revisão futuramente, o que é um erro, pois todo bom projeto necessita de revisão e mudanças após um certo período. Também há uma expectativa do arquiteto sempre se manter atualizado sobre as tendências de mercado enchergar oportunidades de agregar valor. Além de assegurar o andamento certo do projeto de acordo com as decisões, ter uma experiência diversificada (conhecer várias tecnologias e quando aplica-las), dominar o conhecimento sobre o negócio e ter habilidades interpessoais sabendo lidar com questões politicas dentro e fora da empresa
+
+- Decisões de arquitetura
+
+O arquiteto precisa orientar a equipe e ajudar a tomar as decisões de quais tecnologias seram utilizadas no projeto ou na empresa como um todo baseado em sua experiência, escutando ativamente as sugestões da equipe de desenvolvimento e se forem pertinentes acatar a sugestão, tornando a decisão mais acertiva.
+
+- Analisar continuamente a arquitetura 
+
+Se trata de um dos trabalhos do arquiteto fazer análises e pequenas atualizações no sistema para não precisar mudar muitas coisas ao mesmo tempo, tornando o trabalho mais organizado sem sobrecarregar as equipes.
+
+- Manter-se atualizado
+
+Precisa conhecer as tendências tendo uma noção geral de mercado trazendo melhorias e novas tecnologias para mudanças imediatas ou futuras.
+
+- Assegurar a conformidade com as decisões
+
+É a parte do trabalho que o arquiteto verifica se o projeto está sendo desenvolvido conforme as decisões de arquitetura e princípios design que optou.
+
+- Domínio do negócio 
+
+Além de ser um profissional técnico o arquiteto precisa ser conhecer muito bem o negócio e fazer uma ponte entre o que o cliente quer e precisa, a equipe que trabalha e seus superiores. Assim podendo trazer soluções mais acertivas.
+
+- DevOps
+
+Existem dois tipos de DevOps, a cultura e o cargo
+
+O propósito DevOps é entregar valor ao cliente por meio de um ciclo infinito no qual o projeto é planejado, codificado, integrado de forma continua, testado, implantado, operado que nada mais é do que o suporte e por fim receber o feedback utilizando essas informações para nortear os próximos passos.
+
+Cultura DevOps 
+
+Ter uma cultura DevOps na empresa significa dizer que todos da equipe sabem todas as partes do processo e o que acontece em cada uma delas dando a todos na empresa um sentimento de responsabilidade maior sobre os projetos em que estão atuando.
+
+Cargo DevOps
+
+O cargo DevOps se trata de uma equipe especialista nesse processo e ajuda todo o resto da equipe de desenvolvimento a agregar valor e satisfazer os clientes entregando exatemente o que ele quer e se possível até um pouco a mais.
