@@ -146,3 +146,12 @@ Ter uma cultura DevOps na empresa significa dizer que todos da equipe sabem toda
 Cargo DevOps
 
 O cargo DevOps se trata de uma equipe especialista nesse processo e ajuda todo o resto da equipe de desenvolvimento a agregar valor e satisfazer os clientes entregando exatemente o que ele quer e se possível até um pouco a mais.
+
+
+## Aula 04/09/2025
+
+- Diferença entre Arquitetura e Design
+
+
+
+- Como é a formação do conhecimento de um arquiteto modelo T
