@@ -152,6 +152,8 @@ O cargo DevOps se trata de uma equipe especialista nesse processo e ajuda todo o
 
 - Diferença entre Arquitetura e Design
 
-
+A arquitetura de um software é toda a parte estrutural do projeto cuidando das características da arquitetura (Requisitos não funcionais), do estilo (micro-serviços ou crud) e da estrutura de componentes podendo organizar o sistema em pequenas partes reutilizaveis e independentes. Já o design cuida da parte de diagrama de classes, interface do usuário e do código fonte do projeto. Isso é uma divisão teórica, pois no mundo real o arquiteto não assume apenas a parte de arquitetura deixando a parte de design para a equipe de desenvolvimento e criando barreiras. O arquiteto e a equipe de desenvolvimento precisam ter uma relação próxima para que as decisões sobre a arquitetura sejam seguidas sem alterações e o design se encaixe no planejamento do projeto. Assim o arquiteto se torna um líder bem visto e respeitado, trazendo mentoria para equipe de desenvolvimento.
 
 - Como é a formação do conhecimento de um arquiteto modelo T
+
+Um arquiteto com formação de conhecimento modelo T conhece muitas tecnologias, de forma superficial para auxilia-lo na tomada de decisão sabendo qual ou quais tipos de tecnologias podem funcionar melhor para o projeto que está trabalhando, pois para ele é mais importante saber que existem 5 soluções do que ser especialista em apenas uma sem ter o conhecimento da existência das demais. Apesar disso ele carrega com sigo um conhecimento mais aprofundado em suas áreas de especialização o que se mostra muito útil em alguns projetos.
