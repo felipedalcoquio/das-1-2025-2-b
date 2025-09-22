@@ -188,3 +188,5 @@ Os trade offs são algumas trocas que fazemos no sistema para ele entregar as ca
         
         - Desvantagens
         tem uma maior complexidade para adicionar um novo subscriber e o publisher precisa mandar uma mensagem para cada uma das filas e deixar a mensagem disponível para o subscriber. Mas a vantagens como por exemplo o armazenamento das mensagens nas filas, um baixo acoplamento e a possibilidade do publisher mandar mensagens diferentes para cada um dos subscribers.
+
+Uma forma para resolver alguns problemas exclusivos do uso da Fila e do Tópico, é utilizar os dois juntos, isso ira reduzir o acoplamento, terá capacidade de guardar o conteúdo das mensagens na ordem que foram enviadas, mas por outro lado deixará o projeto mais caro. Esse modelo se chama Fan-out buffer 
