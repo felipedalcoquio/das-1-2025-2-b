@@ -176,7 +176,15 @@ Os trade offs são algumas trocas que fazemos no sistema para ele entregar as ca
 - Vantagens e Desvantagens de cada opção
 
     - Tópico
-    No Tópico tem uma menor complexidade para adicionar um novo subscriber e além disso só é preciso mandar um mensagem e todos receberam cópias identicas da mensagem desejada. Em contra partida nesse modelo tem um acoplamento maior, a mensagem precisa ser maior e mais bem escrita e não é possível mandar mensagens diferentes para cada um dos subscribers.
+        - Vantagens 
+        No Tópico tem uma menor complexidade para adicionar um novo subscriber e além disso só é preciso mandar um mensagem e todos receberam cópias identicas da mensagem desejada. O tópico também tem uma grande robustez, escalabilidade e segurança em núvem.
+        
+        - Desvantagens
+        Nesse modelo tem um acoplamento maior, a mensagem precisa ser maior e mais bem escrita e não é possível mandar mensagens diferentes para cada um dos subscribers. Tópico tem uma desvantagem em servidores locais, pois não tem a escalabilidade disponível na núvem. 
 
     - Fila
-    Na Fila tem uma maior complexidade para adicionar um novo subscriber e o publisher precisa mandar uma mensagem para cada uma das filas e deixar a mensagem disponível para o subscriber. Mas a vantagens como por exemplo o armazenamento das mensagens nas filas, um baixo acoplamento e a possibilidade do publisher mandar mensagens diferentes para cada um dos subscribers.
+        - Vantagens 
+        Na Fila tem vantagens como por exemplo o armazenamento das mensagens nas filas, um baixo acoplamento e a possibilidade do publisher mandar mensagens diferentes para cada um dos subscribers. Além disso, tem robustez, segurança, escalabilidade e controle individualizado de cada uma das filas sabendo quantas mensagens tem e se há a necessidade aumentar o poder de processamento da fila.
+        
+        - Desvantagens
+        tem uma maior complexidade para adicionar um novo subscriber e o publisher precisa mandar uma mensagem para cada uma das filas e deixar a mensagem disponível para o subscriber. Mas a vantagens como por exemplo o armazenamento das mensagens nas filas, um baixo acoplamento e a possibilidade do publisher mandar mensagens diferentes para cada um dos subscribers.
