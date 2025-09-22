@@ -157,3 +157,26 @@ A arquitetura de um software é toda a parte estrutural do projeto cuidando das 
 - Como é a formação do conhecimento de um arquiteto modelo T
 
 Um arquiteto com formação de conhecimento modelo T conhece muitas tecnologias, de forma superficial para auxilia-lo na tomada de decisão sabendo qual ou quais tipos de tecnologias podem funcionar melhor para o projeto que está trabalhando, pois para ele é mais importante saber que existem 5 soluções do que ser especialista em apenas uma sem ter o conhecimento da existência das demais. Apesar disso ele carrega com sigo um conhecimento mais aprofundado em suas áreas de especialização o que se mostra muito útil em alguns projetos.
+
+
+## Aula 08/09/2025 e 11/09/2025
+
+- Trade offs ou Compensações
+
+Os trade offs são algumas trocas que fazemos no sistema para ele entregar as características que precisa ter e solucionar um possível problema no futuro, mas essas trocas geram prejuízos em outras partes do sistema um exemplo muito utilizado é a escolha de ter mais segurança no software o que afeta diretamente a agilidade desse software.
+
+- Opções para um sistema de comunicação (mensagens)
+
+    - Tópico 
+    utiliza o sistema de observer no qual tem um publiser que se comunica através do tópico (que se chama Broker) com os subscribers enviando cópias da mesma mensagem desejada para cada um de forma automática, pois o publiser empurra a mensagem para o subscriber, utilizando algum sistema na núvem, se utilizar banco de dados o publisher da um insert e o subscriber faz um select. Alguns exemplos Apache Kafka, Rabbitmq, AWS SNS, Azure ServiceBus, Redis.
+
+    - Fila 
+    Na Fila continua com um observer mas nesse caso o publisher se comunica através de filas que armazenam as mensagens na ordem que foram enviadas e o subscriber precisa pedir essa informação para recebe-la. O publisher precisa enviar as mensagens de forma separada para cada um dos subscribers.
+
+- Vantagens e Desvantagens de cada opção
+
+    - Tópico
+    No Tópico tem uma menor complexidade para adicionar um novo subscriber e além disso só é preciso mandar um mensagem e todos receberam cópias identicas da mensagem desejada. Em contra partida nesse modelo tem um acoplamento maior, a mensagem precisa ser maior e mais bem escrita e não é possível mandar mensagens diferentes para cada um dos subscribers.
+
+    - Fila
+    Na Fila tem uma maior complexidade para adicionar um novo subscriber e o publisher precisa mandar uma mensagem para cada uma das filas e deixar a mensagem disponível para o subscriber. Mas a vantagens como por exemplo o armazenamento das mensagens nas filas, um baixo acoplamento e a possibilidade do publisher mandar mensagens diferentes para cada um dos subscribers.
