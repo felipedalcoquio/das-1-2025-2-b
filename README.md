@@ -7,7 +7,7 @@ Uma das principais funcões dos projetos de software é resolver problemas atrav
 
 - Complexidade
 
-A complexidade é um grande problema para o desenvolvimento, a cada etapa o sistema se torna mais complexo, mais fácil de dar erro e apresentar inconsistêcias. Isso se torna obvio quando entendemos que ele é uma representação do mundo que em sua essência é complexo e sempre tem problemas muito dificeis de serem solucionados. Ou seja, a complexidade é espelhada nos sistemas da mesma forma que se apresenta no mundo real
+A complexidade é um grande problema para o desenvolvimento, a cada etapa o sistema se torna mais complexo, mais fácil de dar erro e apresentar inconsistêcias. Isso se torna obvio quando entendemos que ele é uma representação do mundo que em sua essência é complexo e sempre tem problemas muito dificeis de serem solucionados. Ou seja, a complexidade é espelhada nos sistemas da mesma forma que se apresenta no mundo real.
 
 - Orientação a objetos
 
@@ -19,7 +19,7 @@ O intuito de utilizar padrões é facilitar o seu entendimento e o de quem for a
 
 - Frameworks
 
-Aprender um Framework se faz muito importante, uma vez que aprendeu a lógica de um consegue entender os outros pois todos eles tem lógicas extremamente similares. Ademais essa escolha de Framework é o fator vital para o sistema ser um sucesso ou não
+Aprender um Framework se faz muito importante, uma vez que aprendeu a lógica de um consegue entender os outros pois todos eles tem lógicas extremamente similares. Ademais essa escolha de Framework é o fator vital para o sistema ser um sucesso ou não.
 
 - Ocultação de informação
 
@@ -37,7 +37,7 @@ Coesão é quando um código faz apenas uma coisa bem feita e isso o torna efici
 - Acoplamento
 
 A ideia principal do acoplamento é fazer com que as classes não conversem diretamente para que a aplicação continue rodando sem haver problemas
-Sempre que houver uma associação entre classes terá uma variável
+Sempre que houver uma associação entre classes terá uma variável.
 
 ## Aula 07/08/2025
 
@@ -62,15 +62,15 @@ A lógica por trás desse princípio é tornar possível o fácil desacoplamento
 
 - Preferir Associação à Herança
 
-Significa dizer que na maioria dos casos vamos usar a associação no lugar da herança, pois a associação constroi o encapsulamento de classes e também é mais abrangente um exemplo disso: um funcionário se torna cliente e vice versa. Enquanto isso a herança viola o encapsulamento da classe pai e é excludente gerando problemas. A grande maioria dos casos vamos usar associação ao invés de herança, existem raros casos que ela realmente se faz útil
+Significa dizer que na maioria dos casos vamos usar a associação no lugar da herança, pois a associação constroi o encapsulamento de classes e também é mais abrangente um exemplo disso: um funcionário se torna cliente e vice versa. Enquanto isso a herança viola o encapsulamento da classe pai e é excludente gerando problemas. A grande maioria dos casos vamos usar associação ao invés de herança, existem raros casos que ela realmente se faz útil.
 
 - Princípio de Demeter
 
 Também conhecido como princípio do menor conhecimento tem como ideia central que a implementação dentro de um método pode invocar
-- apenas métodos da própria classe
-- objetos passados por parâmetros do método
-- objetos criados pelo próprio método
-- atributo da classe do método
+    - apenas métodos da própria classe
+    - objetos passados por parâmetros do método
+    - objetos criados pelo próprio método
+    - atributo da classe do método
 
 - Princípio Aberto/Fechado
 
@@ -80,7 +80,7 @@ Significa dizer que nosso código precisa ficar protegido e fechado para modific
 
 - Princípio de Liskov 
 
-Esse princípio diz que tendo uma superclasse (classe pai) e tenho subclasses (classes filhas) que herdam desse pai, preciso que todas as classes filhas tenham os mesmos métodos para que seja possível fazer trocas entre elas sem quebrar o código.
+Esse princípio diz que tendo uma superclasse (classe pai) e tenho subclasses (classes filhas) que herdam desse pai, é preciso que todas as classes filhas tenham os mesmos métodos para que seja possível fazer trocas entre elas sem quebrar o código.
 
 
 - Tudo que é estático é carregado primeiro na memória
