@@ -190,3 +190,26 @@ Os trade offs são algumas trocas que fazemos no sistema para ele entregar as ca
         tem uma maior complexidade para adicionar um novo subscriber e o publisher precisa mandar uma mensagem para cada uma das filas e deixar a mensagem disponível para o subscriber. Mas a vantagens como por exemplo o armazenamento das mensagens nas filas, um baixo acoplamento e a possibilidade do publisher mandar mensagens diferentes para cada um dos subscribers.
 
 Uma forma para resolver alguns problemas exclusivos do uso da Fila e do Tópico, é utilizar os dois juntos, isso ira reduzir o acoplamento, terá capacidade de guardar o conteúdo das mensagens na ordem que foram enviadas, mas por outro lado deixará o projeto mais caro. Esse modelo se chama Fan-out buffer 
+
+
+## Aula 06/10/2025
+
+- Definições da Arquitetura
+
+    Os requisitos não funcionais tem vários nomes utilizados nas organizações, mas o que melhor se encaixa é características da arquitetura. Uma característica da arquitetura atende a três critérios:
+
+    - Especifica uma consideração de design fora do domínio
+    - Influencia um aspecto estrutural do design 
+    - É Essencial ou importante para o sucesso da aplicação
+
+    Esses critérios se subdividem em outras características sendo elas operacionais, estruturais e transversáis.
+
+    - As características operacionais são todas aquelas que envolvem desempenho, escalabilidade, elasticidade, disponibilidedade e confiabilidade. Essas características tem uma parte significativa com as preocupações de operações de DevOps, sendo interligada com muitas outras partes do projeto.
+
+    - As características estruturais são referente a estrutura do código, na qual o arquiteto tem uma responsabilidade única ou compartilhada com as questões de qualidade do código tendo em foco a boa modularidade, acoplamento controlado, código levível entre outros tópicos de avaliações internas da qualidade.
+
+    - As características transversáis são aquelas que não foram categorizadas mas formam partes importantes das restrições de design
+
+## Aula 09/10/2025
+
+-
