@@ -208,8 +208,10 @@ Uma forma para resolver alguns problemas exclusivos do uso da Fila e do Tópico,
 
     - As características estruturais são referente a estrutura do código, na qual o arquiteto tem uma responsabilidade única ou compartilhada com as questões de qualidade do código tendo em foco a boa modularidade, acoplamento controlado, código levível entre outros tópicos de avaliações internas da qualidade.
 
-    - As características transversáis são aquelas que não foram categorizadas mas formam partes importantes das restrições de design
+    - As características transversáis são aquelas que não foram categorizadas mas formam partes importantes das restrições de design. Alguns exemplos dessas características são usabilidade, compatibilidade, autenticação, privacidade, suporte e segurança que representam bem essa categoria.
 
 ## Aula 09/10/2025
 
--
+- Trade-offs e Arquitetura menos pior
+
+Nesse tópico o autor comenta que não existe a melhor arquitetura, mas sim a que resolve o problema desejado. Quando montamos uma arquitetura genérica para tentar solucionar todos os problemas geralmente falhamos, pois cada escolha que fazemos gera algum tipo de compensação ou também conhecido com trade-off. Por exemplo cada vez que quisermos obter mais segurança, conseguentemente perderemos desempenho em algum nível. 
