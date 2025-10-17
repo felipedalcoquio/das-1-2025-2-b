@@ -215,3 +215,14 @@ Uma forma para resolver alguns problemas exclusivos do uso da Fila e do Tópico,
 - Trade-offs e Arquitetura menos pior
 
 Nesse tópico o autor comenta que não existe a melhor arquitetura, mas sim a que resolve o problema desejado. Quando montamos uma arquitetura genérica para tentar solucionar todos os problemas geralmente falhamos, pois cada escolha que fazemos gera algum tipo de compensação ou também conhecido com trade-off. Por exemplo cada vez que quisermos obter mais segurança, conseguentemente perderemos desempenho em algum nível. 
+
+- Circuit breaker Pattern ( Padrão do Disjuntor )
+
+    Esse padrão ajuda o sistema a se recuperar com mais eficáfia, pois ele bloqueia temporariamente o acesso a um serviço com defeito evitando tentativas repetidas sem sucesso. O disjuntor atua como um proxy e você pode implementar ele como uma máquina dividida em três estados: 
+        
+    - Fechado: No estado fechado a solicitação é roteada para a aplicação. O proxy mantém uma contagem de falhas recentes, caso ocorra uma falha ele inicía a contagem. Se o proxy passar do limite de falhas em determinado período ele altera o estado para aberto e inicía a contagem do tempo para a correção da falha, quando o tempo acaba ele altera o estado para meio aberto.
+
+    - Aberto: No estado aberto a solicitação falha imediatamente e retorna falha ao aplicativo.
+
+    - Meio Aberto: No estado meio aberto tem um limite de solicitações que podem ser feitas a aplicação, se forem bem sucedidas o proxy vai para o estado fechado. Caso o número de solicitações passar do limite ele retorna para o estado aberto e reinicía o temporizador para o sistema recuperar as falhas
+    
