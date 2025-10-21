@@ -226,3 +226,19 @@ Nesse tópico o autor comenta que não existe a melhor arquitetura, mas sim a qu
 
     - Meio Aberto: No estado meio aberto tem um limite de solicitações que podem ser feitas a aplicação, se forem bem sucedidas o proxy vai para o estado fechado. Caso o número de solicitações passar do limite ele retorna para o estado aberto e reinicía o temporizador para o sistema recuperar as falhas
     
+## Aula 13/10/2025
+
+- Padrão CQRS (Command Query Responsability Segregation)
+
+    Esse padrão busca reduzir um problema de deadlock muito comum nos bancos de dados relacionais, escalando horizontalmente os bancos. Assim, dividem a carga e as responsabilidades de cada um deles, utilizando um para escrever os dados e o outro para ler. 
+    Os benefícios de utilizar esse padrão é:
+    
+    - Escalar de forma independente: Cada um dos bancos de gravação e leitura de acordo com a carga que estão recebendo;
+    - Otimizar os dados: Utilizando um esquema otimizado para consulta na operação de leitura e outra esquema para otimizar a atualização na operação de gravação;
+    - Segurança: Separando gravação e leitura temos uma segurança maior, pois garante que as entidades ou operações necessárias tenham permissões de gravação;
+    - Separação de preocupações: Ao separar as responsabilidades de leitura e gravação os modelos ficam mais limpos e fáceis de manter. Pois o modelo de leitura se preocupa apenas com a eficiência das consultas e o de gravação lida com a parte complexa da lógica do negócio;
+    - Consultas mais simples: Por conta de se usar um banco de dados apenas para leitura a aplicação pode evitar junções complexas no momento que realiza consultas.
+
+    As considerações a serem feitas são: 
+
+    - O conceito do CQRS em si é simples, mas a utilização desse padrão pode trazer maior complexidade no design da aplicação. Além disso, o envio de mensagens não é requisito, porém é frequêntemente usado para processar comandos e publicar eventos, nesse momento em que o envio da mensagem for incluido a aplicação deve levar em conta possíveis erros como falha de mensagens, duplicatas e novas tentativas. Por último é preciso estar ciente de que pode ocorrer um atraso nas cópias mais recentes do banco de leitura.
