@@ -247,4 +247,32 @@ Nesse tópico o autor comenta que não existe a melhor arquitetura, mas sim a qu
 
     - Grande Bola de Lama: Nesse padrão temos um sistema que cresceu de forma rápida e desordenada gerando um código mal estruturado e confuso. Geralmente nesse tipo de padrão o código tem módulos totalmente dependente uns dos outros, em forma de espaguete, dificultando o entendimento, correção e implementação de melhorias. Um forte indício de que está lidando com um código desse tipo é o grande medo de mexer nele ou se tem apenas um especialista que faz as alterações necessárias.
 
-    - Arquitetura Unitária: Os primeiros sistemas eram baseados na arquitetura desktop + servidor de banco de dados, deixando a parte de apresentação e também uma cópia inteira do sistema no desktop, a lógica mais complexa e volumétrica ficava no servidor de banco de dados, sendo necessário ter um servidor para o banco robusto para suportar a carga (Store Procidure). Essa arquitetura dominou o mundo da programação nos anos 90 e tá hoje ainda temos sistemas que rodam com essa arquitetura. Posteriormente, com a invenção da internet houve uma mudança nessa arquitetura transferindo a parte de apresentação para o navegador e a lógica complexa e volumétrica, trafego de dados e telas para o servidor web, na primeira versão. Hoje em dia essa arquitetura mudou, deixando a abertura e fechamente de tela, validação de campos no desktop. O servidor web e o servidor de banco de dados continuam com a maior parte da lógica, mas agora trafega apenas dados na rede
+    - Arquitetura Unitária: Os primeiros sistemas eram baseados na arquitetura desktop + servidor de banco de dados, deixando a parte de apresentação e também uma cópia inteira do sistema no desktop, a lógica mais complexa e volumétrica ficava no servidor de banco de dados, sendo necessário ter um servidor para o banco robusto para suportar a carga (Store Procidure). Essa arquitetura dominou o mundo da programação nos anos 90 e tá hoje ainda temos sistemas que rodam com essa arquitetura. Posteriormente, com a invenção da internet houve uma mudança nessa arquitetura transferindo a parte de apresentação para o navegador e a lógica complexa e volumétrica, trafego de dados e telas para o servidor web, na primeira versão. Hoje em dia essa arquitetura mudou, deixando a abertura e fechamente de tela, validação de campos no desktop. O servidor web e o servidor de banco de dados continuam com a maior parte da lógica, mas agora trafega apenas dados na rede.
+
+## Aula 16/10/2025
+
+- Padrão de Três Camadas
+     
+    O padrão de três camadas ficou muito popular na década de 1990 devido ao crescente número de linguagens que começaram a ser amplamente utilizadas. Para duas linguagens diferentes conversarem é preciso um intermediador, por isso foi criado o CORBA que é um Broker para que o Java e o C++ pudessem se comunicar e dessa forma facilitou a criação dos sistemas distribuidos. Mas com essa arquitetura foi implementada a serialização, pelos arquitetos da época, no Java. Todo Object no Java implementa uma interface que suporta essa serialização, só que hoje em dia não é mais usado e não se sabe ao certo as implicações a longo prazo que essa arquitetura pode causar. Atualmente a Netflix utiliza a arquitetura RMI que é baseado no CORBA, para fazer a comunicação dos micro serviços. já o modelo DCOM que foi criado pela Microsoft ficou apenas no ambiente de programação da Microsoft, não se tornando popular e amplamente usado como o CORBA.
+
+- Arquitetura Monolítica vs Distribuida
+
+    Um monolito é um sistema que foi criado e escrito em um mesmo repositório. Por característica os monolitos tem um alto acomplamento e quando é compilado vira um único arquivo JAR que contem todo o programa. Esse é o jeito mais fácil de aprender a programar e continua sendo muito utilizados em ERPs no mundo todo.
+
+    Já a arquitetura distribuida é composta por vários micro serviços conectados por protocolos de acesso remoto. Esse tipo de arquitetura é mais poderosa do que os monolitos no quesito desempenho, escalabilidade e disponibilidade, mas tem seus trade-offs como por exemplo a complexidade de fazer manutenções e alterações, variação de latência e enfraquecimento da segurança. A arquitetura distribuida tem um grupo de problemas descrito nas falácias, são afirmações julgadas verdadeiras porém são falsas, a seguir:
+
+        - Rede ser confiável
+        - Latência ser zero
+        - Largura de banda ser infinita
+        - Rede ser segura
+        - Topologia da internet nunca mudar
+        - Existência de apenas um administrador
+        - Custo do transporte ser zero
+        - Rede ser homogênea
+
+
+
+- Padrão Retry (Tentar novamente)
+
+    Esse é um padrão de arquitetura que permite a aplicação lidar com falhas transitórias ao tentar se conectar em um serviço ou recurso de rede, repetindo de forma transparente a operação com falha. A estratégia de repetição é estruturada da seguinte forma: Cancelada - Se a falha não for transitória ou provavelmente não será bem sucedida se repetida, a operação é cancelada. Tentar novamente - Caso seja uma falha específica ou incomum como o corrompimento de um pacote de rede durante, a aplicação faz uma nova tentativa imediatamente. Tentar novamente com atraso - E por último, caso tenha uma falha mais comum como problema de conectividade ou ocupação, a aplicação tenta novamente com um atraso para verificar se o erro persiste.
+
