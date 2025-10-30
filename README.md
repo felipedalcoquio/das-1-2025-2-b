@@ -276,3 +276,8 @@ Nesse tópico o autor comenta que não existe a melhor arquitetura, mas sim a qu
 
     Esse é um padrão de arquitetura que permite a aplicação lidar com falhas transitórias ao tentar se conectar em um serviço ou recurso de rede, repetindo de forma transparente a operação com falha. A estratégia de repetição é estruturada da seguinte forma: Cancelada - Se a falha não for transitória ou provavelmente não será bem sucedida se repetida, a operação é cancelada. Tentar novamente - Caso seja uma falha específica ou incomum como o corrompimento de um pacote de rede durante, a aplicação faz uma nova tentativa imediatamente. Tentar novamente com atraso - E por último, caso tenha uma falha mais comum como problema de conectividade ou ocupação, a aplicação tenta novamente com um atraso para verificar se o erro persiste.
 
+## Aula 20/10/2025 e 23/10/2025
+
+- Estilos de arquitetura em camadas
+
+    A arquitetura em camadas, também conhecida por n-tier(multicamadas) é dos estilos mais comuns e utilizados pela maioria das aplicações por conta de sua simplicidade, familiaridade e baixo custo.
