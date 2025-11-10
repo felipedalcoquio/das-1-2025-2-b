@@ -276,8 +276,16 @@ Nesse tópico o autor comenta que não existe a melhor arquitetura, mas sim a qu
 
     Esse é um padrão de arquitetura que permite a aplicação lidar com falhas transitórias ao tentar se conectar em um serviço ou recurso de rede, repetindo de forma transparente a operação com falha. A estratégia de repetição é estruturada da seguinte forma: Cancelada - Se a falha não for transitória ou provavelmente não será bem sucedida se repetida, a operação é cancelada. Tentar novamente - Caso seja uma falha específica ou incomum como o corrompimento de um pacote de rede durante, a aplicação faz uma nova tentativa imediatamente. Tentar novamente com atraso - E por último, caso tenha uma falha mais comum como problema de conectividade ou ocupação, a aplicação tenta novamente com um atraso para verificar se o erro persiste.
 
-## Aula 20/10/2025 e 23/10/2025
+## Aulas 20/10/2025 e 23/10/2025
 
 - Estilos de arquitetura em camadas
 
-    A arquitetura em camadas, também conhecida por n-tier(multicamadas) é dos estilos mais comuns e utilizados pela maioria das aplicações por conta de sua simplicidade, familiaridade e baixo custo.
+    A arquitetura em camadas, também conhecida por n-tier(multicamadas) é dos estilos mais comuns e utilizados pela maioria das aplicações por conta de sua simplicidade, familiaridade e baixo custo. Esse tipo de arquitetura também é um modo muito natural de se desenvolver aplicações devido a Lei de Conway, que determina que as organizações que projetam sistemas estão limitadas produzir cópias das estruturas de comunicação de suas próprias organizações. 
+
+    - Topologia
+
+    Existe alguns tipos de topologia de arquitetura em camadas e eles são organizadas em camadas horizontais lógicas, não há restrições especificas em termos de quantidade e tipos de camadas, porém a maioria das arquiteturas consiste em quatro camadas sendo ela: apresentação, comercial, persistência e banco de dados. Em alguns casos de aplicações menores a camada comercial e de persistência são combinadas formando a camada de negócio, já as maiores e mais complexas aplicações podem conter 5 ou mais camadas.
+
+    A arquitetura em camadas pode ser dividida em três variações físicas a primeira combina as camadas de apresentação, comercial e de persistência e separa o banco de dados físico externo. Na segunda separa a camada de apresentação e de banco de dados, combina a camada comercial e de persistência. A terceira combina todas as camadas em um único bloco de implementação.
+
+    Esse estilo de arquitetura tem uma função e responsabilidade única dentro da aplicação, cada camada tem sua responsabilidade muito bem 
