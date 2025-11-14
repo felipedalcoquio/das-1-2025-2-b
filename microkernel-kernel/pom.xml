@@ -46,6 +46,7 @@
 			<artifactId>microkernel-interface</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+
 		<dependency>
 			<groupId>br.univille</groupId>
 			<artifactId>microkernel-plugin</artifactId>

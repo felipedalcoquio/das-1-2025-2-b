@@ -288,4 +288,6 @@ Nesse tópico o autor comenta que não existe a melhor arquitetura, mas sim a qu
 
     A arquitetura em camadas pode ser dividida em três variações físicas a primeira combina as camadas de apresentação, comercial e de persistência e separa o banco de dados físico externo. Na segunda separa a camada de apresentação e de banco de dados, combina a camada comercial e de persistência. A terceira combina todas as camadas em um único bloco de implementação.
 
-    Esse estilo de arquitetura tem uma função e responsabilidade única dentro da aplicação, cada camada tem sua responsabilidade muito bem 
+    Esse estilo de arquitetura reparte a aplicação em camadas e estabelece uma função e responsabilidade única para uma delas. Assim deixando a aplicação mais eficiênte e com o modelo de responsabilidade muito bem definido.
+    
+     
