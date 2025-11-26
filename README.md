@@ -290,4 +290,38 @@ Nesse tópico o autor comenta que não existe a melhor arquitetura, mas sim a qu
 
     Esse estilo de arquitetura reparte a aplicação em camadas e estabelece uma função e responsabilidade única para uma delas. Assim deixando a aplicação mais eficiênte e com o modelo de responsabilidade muito bem definido.
     
-     
+    - Camadas de Isolamento
+
+    O uso de camadas abertas e fechadas na arquitetura de software é fundamental para controlar acessos e manter o isolamento entre componentes. As camadas fechadas garantem que uma requisição siga obrigatoriamente pela camada imediatamente abaixo, evitando acessos indevidos e preservando a independência entre partes do sistema. Já as camadas abertas permitem que certas requisições avancem diretamente para camadas inferiores, quando isso faz sentido para o fluxo da aplicação. Um exemplo prático ocorre quando objetos compartilhados, como utilitários de data, string, auditoria ou log, estão na camada de negócio e a camada de apresentação, ao ter acesso a ela, poderia utilizá-los indevidamente. 
+    
+    Para resolver esse problema proposto no livro Fundamentos da Arquitetura de Software, adiciona-se uma nova camada de serviços que concentra esses objetos compartilhados. Assim, a camada de negócio permanece fechada, impedindo o acesso direto da apresentação, enquanto a camada de serviços é marcada como aberta, permitindo flexibilidade para que a camada de negócio acesse a persistência sem ser obrigada a passar por ela. Essa organização torna os fluxos mais claros, reduz o acoplamento e facilita testes, manutenção e evolução do sistema, desde que esteja bem documentado quais camadas são abertas ou fechadas e os motivos dessa decisão.  
+
+## Aulas 27/10/2025 e 30/10/2025
+
+- Estilo de Arquitetura em Pipeline
+
+    A arquitetura em Pipeline também conhecida como (pipes-and-filters). esse estilo de arquitetura nasceu da decisão de desenvolvedores e arquitetos de dividir a funcionalidade em partes distintas.
+
+    - Topologia
+
+    A tologia dessa arquitetura consiste em canais e filtros, eles se coordenam de modo especifico com os canais formando uma comunicação unidirecional entre os filtros, de maneira geral de ponto a ponto.
+
+    Os pipes formam o canal de comunicação entre os filtros. Normalmente cada canal é unidirecional de ponto a ponto (em vez de um broadcast) por questões de desempenho, captando a entrada de uma fonte e direcionando para outra.
+
+    Os filtros são autonomos, independentes uns dos outros e no geral sem estado. Todos eles devem realizar apenas uma tarefa. As tarefas compostas devem ser lidadas por uma sequência de filtros, não apenas por um isolado.
+
+    Existem quatro tipos de filtros: 
+
+    O Produtor: É o ponto de partida de um processo.
+
+    O Transformador: Capta a entrada, realiza alternativamente uma transformação em um ou em todos os dados, então encaminha para o canal de saída.
+
+    O Verificador:  Capta a entrada, testa um ou mais critérios e então produz opcionalmente uma saída, com base no teste.
+
+    O Consumidor: É o ponto de termino para o fluxo no pipeline. Por vezes os consumidores replicam o resultado para um banco de dados ou podem exibir os resultados finais em uma tela
+
+    O padrão de arquitetura pipeline aparece em várias aplicações facilitando o processamento simples e unidirecional. Alguns exemplos de orquestradores e mediadores que utilizam esse estilo são o Apache e o Camel, que usam a arquitetura pipeline para passar informações de uma etapa no processo do negócio para outra. Como exemplo também tem as ferramentas EDI (Intercâmbio Eletrônico de Dados) e a ETL (Extrair, Transformar, Carregar) ambas utilizam a arquitetura pipeline, a EDI transforma um tipo de documento em outro, e a ETL modifica tanto dados de um banco de dados quanto fontes de dados em outras.
+
+
+
+
